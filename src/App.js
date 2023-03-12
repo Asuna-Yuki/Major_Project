@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Form } from "./component/Form";
+import { Table } from "./component/Table";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='main'>
+        <div className='form'>
+          <section>
+            <h1>Smart farming</h1>
+            <h2>using ML</h2>
+            <div className='table-container'>
+              <Table />
+              <div className='table'>
+                <div className='row'>Delhi</div>
+                <div className='row'>45</div>
+                <div className='row'>30</div>
+                <div className='row'>35</div>
+                <div className='row'>8</div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Inputs required for crop predictions</h3>
+            <Form />
+          </section>
+        </div>
+      </div>
+    </>
   );
 }
 

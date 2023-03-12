@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  font-size: 62.5%;
+  --background: rgb(202, 225, 237);
+  --grey: rgb(212, 212, 212);
+  --black: #111;
+  --white: #fff;
+  --blue: rgba(0, 136, 169, 1);
+  --accent: rgb(71, 88, 195);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  background-color: var(--background);
 }
-
-.App-header {
-  background-color: #282c34;
+.main {
+  max-width: 1100px;
   min-height: 100vh;
+  margin: auto;
+  padding: 1em;
+}
+
+input {
+  display: block;
+  font-size: 1.6rem;
+  height: 2.5em;
+  max-width: 100%;
+  border: 1px solid grey;
+  padding: 0.625em 0.5em;
+  border-radius: 2px;
+  width: 20em;
+  margin-bottom: 0.5em;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+h3 {
+  color: var(--black);
+  margin: 0.5em 0;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+h2 {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 100;
+  text-transform: capitalize;
+  margin-bottom: 2em;
+}
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0em;
+}
+
+p {
+  color: var(--grey);
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  margin-top: 2em;
+}
+
+.btn {
+  padding: 0.6em 1.5em;
+  height: 2.5em;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-weight: 500;
+  font-size: 1.6rem;
+  border: none;
+  margin-top: 1em;
+}
+
+.btn i {
+  font-size: 2rem;
+}
+
+.btn-continue {
+  color: #fff;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 2px;
+}
+
+.btn-continue:hover {
+  background-color: rgb(20, 38, 149);
+}
+
+.form {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.678) 0px 3px 8px;
   display: flex;
-  flex-direction: column;
+  width: max-content;
+  margin: auto;
+  overflow: hidden;
+  min-height: 600px;
+  margin-top: 50px;
+  background-color: var(--white);
+  max-width: 100%;
+}
+.form section:nth-child(1) {
+  padding: 5em;
+  background-color: var(--accent);
+  max-width: 80em;
+}
+.form section:nth-child(2) {
+  padding: 2.5em;
+  background-color: var(--white);
+  max-width: 30em;
+}
+
+.pop-up {
+  position: absolute;
+  height: 120px;
+  width: 260px;
+  background-color: gray;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-transform: capitalize;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: rgba(0, 0, 0, 0.678) 0px 3px 8px;
+  color: var(--black);
+  background-color: var(--white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.table-container {
 }
 
-.App-link {
-  color: #61dafb;
+.table {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1.5fr 0.5fr;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.row {
+  font-size: 2rem;
+  padding: 0.5em;
+  background-color: var(--white);
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: lightgreen;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-color: red;
   }
 }
