@@ -1,11 +1,23 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import { Form } from "./component/Form";
 import { Table } from "./component/Table";
+import { Home } from "./component/Home";
+import { Crop } from "./component/Crop";
+import { Fert } from "./component/Fert";
 
 function App() {
   return (
     <>
-      <div className='main'>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home />}></Route>
+          <Route path='/crop' element={<Crop />}></Route>
+          <Route path='/fert' element={<Fert />}></Route>
+        </Routes>
+      </Router>
+      {/* <div className='main'>
         <div className='form'>
           <section>
             <h1>Smart farming</h1>
@@ -26,7 +38,8 @@ function App() {
             <Form />
           </section>
         </div>
-      </div>
+      </div> */}
+      {/* <Home /> */}
     </>
   );
 }

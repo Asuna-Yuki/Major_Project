@@ -14,27 +14,38 @@
   --white: #fff;
   --blue: rgba(0, 136, 169, 1);
   --accent: rgb(71, 88, 195);
+  --green: #006d5b;
 }
 
-html {
-  background-color: var(--background);
+body {
+  /* background-color: var(--background); */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.096), rgba(0, 0, 0, 0.095)),
+    url("../public/Images/tree-background.jpg"); */
+  background-image: url("../public/Images/tree-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main {
   max-width: 1100px;
   min-height: 100vh;
   margin: auto;
-  padding: 1em;
+  padding: 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 input {
   display: block;
   font-size: 1.6rem;
   height: 2.5em;
-  max-width: 100%;
+  /* max-width: 100%; */
   border: 1px solid grey;
   padding: 0.625em 0.5em;
   border-radius: 2px;
-  width: 20em;
+  width: 100%;
   margin-bottom: 0.5em;
 }
 
@@ -89,13 +100,16 @@ p {
 
 .btn-continue {
   color: #fff;
-  background-color: var(--accent);
+  background-color: #2a2222;
   border: none;
   border-radius: 2px;
+  margin-top: 20px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .btn-continue:hover {
-  background-color: rgb(20, 38, 149);
+  background-color: #1d1818;
 }
 
 .form {
@@ -121,25 +135,9 @@ p {
   max-width: 30em;
 }
 
-.pop-up {
-  position: absolute;
-  height: 120px;
-  width: 260px;
-  background-color: gray;
-  border-radius: 10px;
-  font-size: 2rem;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.678) 0px 3px 8px;
-  color: var(--black);
-  background-color: var(--white);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .table-container {
+  margin-right: 100px;
+  margin-bottom: 20px;
 }
 
 .table {
@@ -155,11 +153,61 @@ p {
   font-weight: 500;
 }
 
-@media screen and (max-width: 1000px) {
+.home-container {
+  /* background-color: var(--green); */
+  background-color: #000000bd;
+  min-height: 100vh;
+  padding: 2em;
+  width: 75%;
+  min-height: 100vh;
+}
+
+.home-container h1 {
+  font-size: 5rem;
+  padding: 0.2em 0;
+}
+
+.home-container p {
+  font-size: 1.6rem;
+  padding-right: 6.25em;
+}
+
+.form-container {
+  /* background-color: var(--green); */
+  background-color: #000000bd;
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2em;
+  width: 75%;
+}
+
+.form-container h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.form-container form {
+  font-size: 1.6rem;
+  max-width: 50em;
+  margin: auto;
+  margin-top: 5em;
+}
+
+.form-container form label {
+  color: var(--white);
+}
+
+.form-container form input {
+  background-color: #00000000;
+  color: var(--white);
+}
+
+/* @media screen and (max-width: 1000px) {
   body {
     background-color: lightgreen;
   }
-}
+} */
 
 @media screen and (max-width: 400px) {
   body {
