@@ -6,6 +6,7 @@ import { Table } from "./component/Table";
 import { Home } from "./component/Home";
 import { Crop } from "./component/Crop";
 import { Fert } from "./component/Fert";
+import { Test } from "./component/Test";
 
 function App() {
   return (
@@ -15,31 +16,9 @@ function App() {
           <Route exact path='/' element={<Home />}></Route>
           <Route path='/crop' element={<Crop />}></Route>
           <Route path='/fert' element={<Fert />}></Route>
+          <Route path='/test' element={<Test />}></Route>
         </Routes>
       </Router>
-      {/* <div className='main'>
-        <div className='form'>
-          <section>
-            <h1>Smart farming</h1>
-            <h2>using ML</h2>
-            <div className='table-container'>
-              <Table />
-              <div className='table'>
-                <div className='row'>Delhi</div>
-                <div className='row'>45</div>
-                <div className='row'>30</div>
-                <div className='row'>35</div>
-                <div className='row'>8</div>
-              </div>
-            </div>
-          </section>
-          <section>
-            <h3>Inputs required for crop predictions</h3>
-            <Form />
-          </section>
-        </div>
-      </div> */}
-      {/* <Home /> */}
     </>
   );
 }
